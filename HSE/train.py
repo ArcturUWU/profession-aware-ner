@@ -104,7 +104,7 @@ def load_brat_data(directory: str):
 
 
 def train():
-    base = "HSE/nerel_dataset/data/NEREL-v1.1/"
+    base = "nerel_dataset/data/NEREL-v1.1/"
     train_data = load_brat_data(base + 'train')
     dev_data   = load_brat_data(base + 'dev')
 
