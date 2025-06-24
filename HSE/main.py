@@ -35,8 +35,7 @@ matcher.add(
     ]]
 )
 
-# 2. Загрузка обученной NER-модели и токенизатора
-model_checkpoint = './ner_profession_model_from_nerel'
+model_checkpoint = './ner_profession_model'
 try:
     tokenizer = BertTokenizerFast.from_pretrained(model_checkpoint)
     model = BertForTokenClassification.from_pretrained(model_checkpoint)
