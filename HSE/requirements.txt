@@ -10,3 +10,4 @@ numpy
 seqeval
 matplotlib
 requests
+accelerate==0.28.0
