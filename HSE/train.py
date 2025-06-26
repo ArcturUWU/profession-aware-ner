@@ -41,10 +41,6 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class PrecisionOrientedTrainer(Trainer):
-    """
-    Trainer subclass with custom loss to prioritize high precision on PROFESSION.
-    Applies heavier penalty for false positives on B-PROFESSION vs I-PROFESSION.
-    """
     def __init__(
         self,
         b_penalty: float = B_PENALTY,
