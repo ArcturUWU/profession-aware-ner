@@ -205,7 +205,7 @@ if __name__ == '__main__':
 
     args = TrainingArguments(
         output_dir=OUTPUT_DIR,
-        eval_strategy='epoch', save_strategy='epoch', save_total_limit=2,
+        evaluation_strategy='epoch', save_strategy='epoch', save_total_limit=2,
         learning_rate=LEARNING_RATE, per_device_train_batch_size=TRAIN_BATCH_SIZE,
         per_device_eval_batch_size=EVAL_BATCH_SIZE, num_train_epochs=EPOCHS,
         weight_decay=WEIGHT_DECAY, logging_steps=LOGGING_STEPS,
