@@ -130,3 +130,8 @@ python HSE/train.py
     python HSE/main.py
     ```
 4.  **Получите результат:** Результаты будут сохранены в файл `test_texts_inference.json`.
+
+## Тестовый стенд
+Обучение модели - NVIDIA GeForce RTX 5090 
+Torch - pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+Инференс модели - Intel Core i7-14700kf 28 threads + 32Gb RAM
