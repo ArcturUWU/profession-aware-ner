@@ -34,7 +34,7 @@ project/
 │   ├── train.py                  # Скрипт для обучения модели с фиксированными параметрами
 │   ├── params_eval.py            # Скрипт для подбора гиперпараметров с Optuna
 │   ├── requirements.txt          # Файл с зависимостями
-│   └── nerel_dataset/            # Датасет NEREL
+│   └── download_dataset            # Датасет NEREL
 ├── data_exploration.py           # Скрипт для анализа данных и распределения классов
 ├── ner_profession_model/         # Пример выходной директории после обучения
 ├── test_texts.xlsx               # Входной файл для инференса
