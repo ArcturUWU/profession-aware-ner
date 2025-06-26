@@ -34,7 +34,7 @@ project/
 │   ├── train.py                  # Скрипт для обучения модели с фиксированными параметрами
 │   ├── params_eval.py            # Скрипт для подбора гиперпараметров с Optuna
 │   ├── requirements.txt          # Файл с зависимостями
-│   └── download_dataset            # Датасет NEREL
+│   └── download_dataset          # Установка датасета NEREL
 ├── data_exploration.py           # Скрипт для анализа данных и распределения классов
 ├── ner_profession_model/         # Пример выходной директории после обучения
 ├── test_texts.xlsx               # Входной файл для инференса
@@ -102,7 +102,6 @@ python HSE/params_eval.py
 1.  **Загрузка данных:** Данные из формата BRAT загружаются и преобразуются в `Dataset` объект библиотеки Hugging Face.
 2.  **Токенизация и выравнивание:** Тексты токенизируются с помощью `BertTokenizerFast`. Метки (tags) выравниваются относительно полученных токенов (WordPiece-токенов).
 3.  **Кастомный тренер:** Используется `PrecisionOrientedTrainer` с его кастомной функцией потерь для повышения `precision`.
-    \[ \mathcal{L} = \mathcal{L}_{CE} + \lambda \cdot P(\text{PROF|Non-PROF}) \]
 4.  **Обучение:** Модель обучается с использованием `Trainer` API и `EarlyStoppingCallback`.
 
 ### Запуск
@@ -128,7 +127,7 @@ python HSE/train.py
 ### Запуск
 
 1.  **Подготовьте данные:** Убедитесь, что в корневой директории проекта (`project/`) находится файл `test_texts.xlsx`.
-2.  **Укажите путь к модели:** В скрипте `HSE/main.py` убедитесь, что переменная `model_checkpoint` указывает на вашу обученную модель (например, `ner_profession_model/`).
+2.  **Укажите путь к модели:** В скрипте `HSE/main.py` убедитесь, что переменная `model_checkpoint` указывает на обученную модель (например, `ner_profession_model/`).
 3.  **Запустите скрипт:**
     ```bash
     python HSE/main.py
