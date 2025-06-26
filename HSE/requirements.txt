@@ -1,0 +1,14 @@
+torch==2.1.0
+transformers==4.35.2
+datasets==2.15.0
+natasha==1.6.0
+ipykernel==6.27.1
+pandas
+spacy
+openpyxl
+benepar 
+optuna
+numpy
+seqeval
+matplotlib
+requests
